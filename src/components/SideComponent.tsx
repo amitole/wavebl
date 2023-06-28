@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
-import DialogPage from "./DialogPage";
+import DialogPage from "./Dialog";
 
-type SideContainerProps = {
+interface SideContainerProps {
   name: string;
 };
 
 const SideContainer = (props: SideContainerProps) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   const handleClickOpen = () => {
     setOpen(true);

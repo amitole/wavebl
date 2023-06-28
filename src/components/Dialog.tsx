@@ -5,14 +5,14 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 
-type DialogProps = {
+interface DialogProps {
   status: boolean;
-  open: () => any;
+  open: () => void;
   parentName: string;
 };
 
 const DialogPage = (props: DialogProps) => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState<string>("");
 
   const handleChange = (
     event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
